@@ -20,11 +20,9 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
 }
-
 .app-container {
   padding: 1rem 3rem;
 }
-
 h1,
 legend {
   color: var(--text-secondary);
@@ -65,19 +63,21 @@ header {
   }
   & a {
     color: var(--text-secondary);
-    max-width: 220px;
+    max-width: 13.75rem;
     background-color: var(--primary-color);
     border-radius: 3px;
     padding: 11px;
     font-weight: bold;
-    margin-top: 30px;
-    height: 40px;
+    margin-top: 1.875rem;
+    height: 2.5rem;
     text-decoration: none;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 1.5s infinite alternate ease-in-out;
 
     &:hover {
       opacity: 0.9;
@@ -135,23 +135,32 @@ section {
     margin-bottom: 4rem;
   }
   a {
-    margin: 10px;
+    margin: 0.625rem;
     text-decoration: none;
     color: var(--text-primary);
     background-color: var(--bg-secondary);
     border-radius: 4px;
-    padding: 11px;
+    padding: 0.6875rem;
     width: 15rem;
     align-items: center;
     text-align: center;
   }
 }
 footer {
+  font-size: 0.8rem;
   background-color: var(--bg-secondary);
   width: 100%;
-  padding: 65px;
+  padding: 2rem;
   justify-content: center;
   text-align: center;
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 5px rgba(11, 162, 26, 0.5);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(11, 162, 26, 0.8);
+  }
 }
 
 @keyframes slideUp {
